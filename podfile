@@ -1,0 +1,7 @@
+platform:ios, '7.0'
+
+target 'testRACKuaidi' do 
+	pod 'ReactiveCocoa'
+	pod 'AFNetworking'
+	pod 'SVProgressHUD'
+end
