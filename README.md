@@ -1,1 +1,3 @@
 # ShunFengExpressSearchDemo
+
+这是一个查询顺丰快递单号的demo，使用了RAC和MVVM
