@@ -28,9 +28,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-HU-LGR">
+
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="2x3-7G-vC4"/>
                                 </constraints>
+
                                 <state key="normal" title="查询"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -38,7 +40,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择您的快递种类" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeS-ZN-JAA">
+
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,6 +52,7 @@
                         <constraints>
                             <constraint firstItem="HOP-HU-LGR" firstAttribute="width" secondItem="zyG-Dk-VLh" secondAttribute="width" id="1HJ-KA-aoI"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Y4-dX-cXM"/>
+
                             <constraint firstItem="HOP-HU-LGR" firstAttribute="centerX" secondItem="zyG-Dk-VLh" secondAttribute="centerX" id="7bx-bT-ph3"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="IH2-0n-LNg"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="top" secondItem="VeS-ZN-JAA" secondAttribute="bottom" constant="19" id="LgK-cY-nN1"/>
@@ -55,6 +60,7 @@
                             <constraint firstItem="VeS-ZN-JAA" firstAttribute="leading" secondItem="zyG-Dk-VLh" secondAttribute="leading" id="pzl-6Q-bIC"/>
                             <constraint firstItem="VeS-ZN-JAA" firstAttribute="height" secondItem="zyG-Dk-VLh" secondAttribute="height" id="smk-Mz-uKd"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="uCE-df-c5W"/>
+
                             <constraint firstItem="HOP-HU-LGR" firstAttribute="top" secondItem="zyG-Dk-VLh" secondAttribute="bottom" constant="15" id="yvY-Jb-nZD"/>
                         </constraints>
                     </view>
