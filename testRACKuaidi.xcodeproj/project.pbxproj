@@ -20,6 +20,7 @@
 		33D5012F1DF54874006EF6AA /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D5012D1DF54874006EF6AA /* ResultTableViewCell.m */; };
 		33D501301DF54874006EF6AA /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33D5012E1DF54874006EF6AA /* ResultTableViewCell.xib */; };
 		56A0BC665913E617621EE329 /* libPods-testRACKuaidi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE288FB8C0829150A6359A8 /* libPods-testRACKuaidi.a */; };
+		9C0045D11DF5A08000AF534B /* ExpressKindPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0045D01DF5A08000AF534B /* ExpressKindPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		33D5012D1DF54874006EF6AA /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		33D5012E1DF54874006EF6AA /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		604EB6F8EA40E9DC50A7D7AD /* Pods-testRACKuaidi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testRACKuaidi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testRACKuaidi/Pods-testRACKuaidi.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0045CF1DF5A08000AF534B /* ExpressKindPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressKindPickerView.h; sourceTree = "<group>"; };
+		9C0045D01DF5A08000AF534B /* ExpressKindPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressKindPickerView.m; sourceTree = "<group>"; };
 		AAE288FB8C0829150A6359A8 /* libPods-testRACKuaidi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testRACKuaidi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,8 +90,7 @@
 				33D501331DF55530006EF6AA /* ViewModel */,
 				33D501351DF55690006EF6AA /* Model */,
 				33D501341DF5553B006EF6AA /* View */,
-				33D5011E1DF536DD006EF6AA /* WDNetwork.h */,
-				33D5011F1DF536DD006EF6AA /* WDNetwork.m */,
+				9C0045CB1DF59CF500AF534B /* Network */,
 				33D501101DF532EB006EF6AA /* Assets.xcassets */,
 				33D501121DF532EB006EF6AA /* LaunchScreen.storyboard */,
 				33D501151DF532EB006EF6AA /* Info.plist */,
@@ -140,6 +142,8 @@
 				33D5012C1DF54874006EF6AA /* ResultTableViewCell.h */,
 				33D5012D1DF54874006EF6AA /* ResultTableViewCell.m */,
 				33D5012E1DF54874006EF6AA /* ResultTableViewCell.xib */,
+				9C0045CF1DF5A08000AF534B /* ExpressKindPickerView.h */,
+				9C0045D01DF5A08000AF534B /* ExpressKindPickerView.m */,
 				33D5010D1DF532EB006EF6AA /* Main.storyboard */,
 			);
 			name = View;
@@ -160,6 +164,15 @@
 				AAE288FB8C0829150A6359A8 /* libPods-testRACKuaidi.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C0045CB1DF59CF500AF534B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				33D5011E1DF536DD006EF6AA /* WDNetwork.h */,
+				33D5011F1DF536DD006EF6AA /* WDNetwork.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		F5CE72795D82DB54E16F5EBB /* Pods */ = {
@@ -303,6 +316,7 @@
 				33D501091DF532EB006EF6AA /* AppDelegate.m in Sources */,
 				33D501201DF536DD006EF6AA /* WDNetwork.m in Sources */,
 				33D501061DF532EB006EF6AA /* main.m in Sources */,
+				9C0045D11DF5A08000AF534B /* ExpressKindPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
