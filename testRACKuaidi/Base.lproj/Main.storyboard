@@ -29,15 +29,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOP-HU-LGR">
-                                <rect key="frame" x="298" y="259" width="31" height="30"/>
+                                <rect key="frame" x="172" y="259" width="31" height="30"/>
                                 <state key="normal" title="查询"/>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvr-pv-K56">
+                                <rect key="frame" x="46" y="164" width="283" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Y4-dX-cXM"/>
+                            <constraint firstItem="Lvr-pv-K56" firstAttribute="centerX" secondItem="zyG-Dk-VLh" secondAttribute="centerX" id="9ci-Qw-7SP"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="IH2-0n-LNg"/>
-                            <constraint firstItem="HOP-HU-LGR" firstAttribute="trailing" secondItem="zyG-Dk-VLh" secondAttribute="trailing" id="Umi-hu-nYu"/>
+                            <constraint firstItem="HOP-HU-LGR" firstAttribute="centerX" secondItem="zyG-Dk-VLh" secondAttribute="centerX" id="NVL-N9-2Y2"/>
+                            <constraint firstItem="Lvr-pv-K56" firstAttribute="leading" secondItem="zyG-Dk-VLh" secondAttribute="leading" id="VsV-vS-NUR"/>
+                            <constraint firstItem="zyG-Dk-VLh" firstAttribute="top" secondItem="Lvr-pv-K56" secondAttribute="bottom" constant="20" id="msY-MI-NDz"/>
                             <constraint firstItem="zyG-Dk-VLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="uCE-df-c5W"/>
                             <constraint firstItem="HOP-HU-LGR" firstAttribute="top" secondItem="zyG-Dk-VLh" secondAttribute="bottom" constant="15" id="yvY-Jb-nZD"/>
                         </constraints>
