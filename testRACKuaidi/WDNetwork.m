@@ -43,10 +43,13 @@ static WDNetwork *_httpManager;
 //    self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
 }
 
-+ (RACSignal *)fetchResultWithNumber:(NSString *)code {
++ (RACSignal *)fetchResultWithNumber:(NSString *)code kind:(NSString *)kindStr{
     [SVProgressHUD show];
+    NSString *kind = [self matchingTheParameterKindWithString:kindStr];
+    
+    
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        NSString *urlStr = [NSString stringWithFormat:@"http://www.kuaidi100.com/query?type=shunfeng&postid=%@",code];
+        NSString *urlStr = [NSString stringWithFormat:@"http://www.kuaidi100.com/query?type=%@&postid=%@",kind,code];
         [[WDNetwork shareInstance].manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -59,6 +62,29 @@ static WDNetwork *_httpManager;
         }];
         return nil;
     }];
+}
+
+///转换textfield传过来的快递类型 为相应的参数类型
++ (NSString *)matchingTheParameterKindWithString:(NSString *)kindStr {
+    NSString *paramKind;
+    if ([kindStr isEqualToString:@"顺丰"]) {
+        paramKind = @"shunfeng";
+    }else if ([kindStr isEqualToString:@"EMS"]) {
+        paramKind = @"ems";
+    }else if ([kindStr isEqualToString:@"申通"]) {
+        paramKind = @"shentong";
+    }else if ([kindStr isEqualToString:@"圆通"]) {
+        paramKind = @"yuantong";
+    }else if ([kindStr isEqualToString:@"汇通"]) {
+        paramKind = @"huitongkuaidi";
+    }else if ([kindStr isEqualToString:@"韵达"]) {
+        paramKind = @"yunda";
+    }else if ([kindStr isEqualToString:@"中通"]){
+        paramKind = @"zhongtong";
+    }else {
+        paramKind = @"";
+    }
+    return paramKind;
 }
 
 @end

@@ -11,6 +11,6 @@
 
 @interface WDNetwork : NSObject
 
-+ (RACSignal *)fetchResultWithNumber:(NSString *)code;
++ (RACSignal *)fetchResultWithNumber:(NSString *)code kind:(NSString *)kindStr;
 
 @end

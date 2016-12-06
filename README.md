@@ -1,3 +1,5 @@
-# ShunFengExpressSearchDemo
+#ExpressSearchDemo
 
-这是一个查询顺丰快递单号的demo，使用了RAC和MVVM
+这是一个查询顺丰快递单号的demo，使用了RAC和MVVM.
+
+添加了动态计算高度，优化了物流详情页面，增加了‘中通，圆通，申通，汇通，韵达’等快件的查询支持

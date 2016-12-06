@@ -17,7 +17,7 @@
 
 - (void)configureContentWithDictionary:(NSDictionary *)dict
 {
-    self.locationLbl.text = [dict[@"location"] isEqualToString:@"null"] ? @" " : dict[@"location"];
+    self.locationLbl.text = [dict[@"location"] isEqualToString:@"null"] ? [NSString stringWithFormat:@"当前位置： 【空】"] : [NSString stringWithFormat:@"当前位置：%@",dict[@"location"]];
     
     self.timeLbl.text = dict[@"time"];
     

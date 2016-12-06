@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveCocoa.h>
 
 @interface ExpressKindPickerView : UIPickerView
+
+@property (strong, nonatomic) RACCommand *selectCommand;
+
+@property (nonatomic,copy) void(^selectKind)(NSString *kindStr);
 
 @end

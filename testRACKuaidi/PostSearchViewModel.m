@@ -20,7 +20,11 @@
 
 
 - (void)configViewModel {
-    NSLog(@"%@",self.enterNumber);
+    
+    RACSignal *validKindSignal = [RACObserve(self, expressKind)
+                                  map:^id(NSString *value) {
+                                      return @(value.length != 0 && ![value isEqualToString:@"请选择"]);
+                                  }];
     
     
     RACSignal *validEnterCode = [RACObserve(self, enterNumber)
@@ -28,22 +32,14 @@
                                      return @(value.length >= 12);
                                  }];
     
-//    [validEnterCode subscribeNext:^(NSNumber *x) {
-//        if ([x boolValue]) {
-//            
-//        }
-//        else {
-//            
-//        }
-//    }];
+    RACSignal *buttonSignal = [RACSignal
+                               combineLatest:@[validKindSignal,validEnterCode]
+                               reduce:^id(NSNumber *kind, NSNumber *code){
+                                   return @([kind boolValue] && [code boolValue]);
+                               }];
     
-    
-//    self.searchCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-//        return [WDNetwork fetchResultWithNumber:self.enterNumber];
-//    }];
-    
-    self.searchCommand = [[RACCommand alloc]initWithEnabled:validEnterCode signalBlock:^RACSignal *(id input) {
-        return [WDNetwork fetchResultWithNumber:self.enterNumber];
+    self.searchCommand = [[RACCommand alloc]initWithEnabled:buttonSignal signalBlock:^RACSignal *(id input) {
+        return [WDNetwork fetchResultWithNumber:self.enterNumber kind:self.expressKind];
     }];
 }
 

@@ -13,6 +13,8 @@
 
 @property (nonatomic,copy) NSString *enterNumber;
 
+@property (nonatomic,copy) NSString *expressKind;
+
 @property (nonatomic,strong) RACCommand *searchCommand;
 
 @end
